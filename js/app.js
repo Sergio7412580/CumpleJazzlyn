@@ -44,7 +44,7 @@ function startOpeningShow() {
     gsap.from(".hero-copy, .hero-actions, .vip-badge", { y: 30, opacity: 0, duration: 0.75, delay: 1.75, stagger: 0.12, ease: "power3.out" });
     gsap.to(".stage-card", { y: -12, rotation: 0.4, duration: 3, repeat: -1, yoyo: true, ease: "sine.inOut" });
     gsap.to(".party-icon", { rotation: 8, scale: 1.08, duration: 0.8, repeat: -1, yoyo: true, ease: "sine.inOut" });
-    gsap.to(".energy-card", { y: -8, duration: 1.4, repeat: -1, yoyo: true, stagger: 0.12, ease: "sine.inOut" });
+    gsap.to(".carousel-slide img", { scale: 1.018, duration: 2.6, repeat: -1, yoyo: true, ease: "sine.inOut" });
     gsap.utils.toArray(".section").forEach((section) => {
       gsap.to(section, {
         yPercent: -2,
@@ -166,16 +166,49 @@ function stopSoftSynth() {
 }
 
 function setupGallery() {
-  document.querySelectorAll(".energy-card").forEach((button) => {
-    button.addEventListener("click", () => {
-      button.classList.toggle("is-active");
-      launchConfetti(30);
-      burstFireworks(3);
-      if (window.gsap) {
-        gsap.fromTo(button, { scale: 0.96, rotate: -2 }, { scale: 1.05, rotate: 1.5, duration: 0.28, yoyo: true, repeat: 1, ease: "power2.out" });
-      }
+  const track = document.getElementById("carouselTrack");
+  if (!track) return;
+
+  const slides = Array.from(track.querySelectorAll(".carousel-slide"));
+  const dots = Array.from(document.querySelectorAll(".carousel-dots button"));
+  const previous = document.getElementById("carouselPrev");
+  const next = document.getElementById("carouselNext");
+  let index = 0;
+  let timerId;
+
+  const showSlide = (nextIndex) => {
+    index = (nextIndex + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === index);
+    });
+    burstFireworks(1);
+  };
+
+  const restartAutoPlay = () => {
+    clearInterval(timerId);
+    timerId = setInterval(() => showSlide(index + 1), 4200);
+  };
+
+  previous.addEventListener("click", () => {
+    showSlide(index - 1);
+    restartAutoPlay();
+  });
+
+  next.addEventListener("click", () => {
+    showSlide(index + 1);
+    restartAutoPlay();
+  });
+
+  dots.forEach((dot, dotIndex) => {
+    dot.addEventListener("click", () => {
+      showSlide(dotIndex);
+      restartAutoPlay();
     });
   });
+
+  showSlide(0);
+  restartAutoPlay();
 }
 
 function setupRsvp() {

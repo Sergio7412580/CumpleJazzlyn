@@ -208,15 +208,42 @@
 
     <section class="section gallery-section">
       <div class="section-heading" data-aos="fade-up">
-        <span>Energía K-Pop</span>
-        <h2 class="font-title">Brillos animados</h2>
+        <span>Galería</span>
+        <h2 class="font-title">Momentos de Gianna</h2>
       </div>
-      <div class="energy-gallery" data-aos="fade-up">
-        <button class="energy-card" type="button"><span>★</span><b>Estrellas</b></button>
-        <button class="energy-card" type="button"><span>♡</span><b>Corazones</b></button>
-        <button class="energy-card" type="button"><span>✦</span><b>Brillos</b></button>
-        <button class="energy-card" type="button"><span>♪</span><b>Música</b></button>
-        <button class="energy-card" type="button"><span>⚡</span><b>Show</b></button>
+      <div class="photo-carousel glass" data-aos="fade-up" aria-label="Carrusel de fotos de Gianna">
+        <button id="carouselPrev" class="carousel-control prev" type="button" aria-label="Foto anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="carousel-viewport">
+          <div id="carouselTrack" class="carousel-track">
+            <figure class="carousel-slide">
+              <img src="assets/images/1.jpeg" alt="Foto 1 de Gianna">
+              <figcaption>1</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <img src="assets/images/2.jpeg" alt="Foto 2 de Gianna">
+              <figcaption>2</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <img src="assets/images/3.jpeg" alt="Foto 3 de Gianna">
+              <figcaption>3</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <img src="assets/images/4.jpeg" alt="Foto 4 de Gianna">
+              <figcaption>4</figcaption>
+            </figure>
+          </div>
+        </div>
+        <button id="carouselNext" class="carousel-control next" type="button" aria-label="Siguiente foto">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="carousel-dots" aria-label="Seleccionar foto">
+          <button type="button" class="is-active" aria-label="Ver foto 1"></button>
+          <button type="button" aria-label="Ver foto 2"></button>
+          <button type="button" aria-label="Ver foto 3"></button>
+          <button type="button" aria-label="Ver foto 4"></button>
+        </div>
       </div>
     </section>
 
@@ -224,7 +251,7 @@
       <div class="music-player glass" data-aos="zoom-in">
         <div>
           <span class="eyebrow">Música</span>
-          <h2 class="font-title">Listas para brillar</h2>
+          <h2 class="font-title">Música K-Pop</h2>
         </div>
         <div class="player-controls">
           <button id="playMusic" class="btn-primary" type="button"><i class="fa-solid fa-play"></i> Reproducir</button>
@@ -272,8 +299,7 @@
   </footer>
 
   <audio id="partyAudio" preload="metadata" loop>
-    <source src="assets/music/Listas_para_Brillar.mp3" type="audio/mpeg">
-    <source src="assets/music/Fiesta_en_el_Escenario.mp3" type="audio/mpeg">
+    <source src="assets/music/musicaKPOP.mp4" type="audio/mp4">
   </audio>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
