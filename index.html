@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Gianna Jazzlyn cumple 4 años! | Invitación K-Pop</title>
+  <meta name="description" content="Invitación digital para el cumpleaños de Gianna Jazzlyn Gómez Mamani.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@500;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: '#090313',
+            magenta: '#ff3e96',
+            violet: '#8a4fff',
+            cyanpop: '#15e7ff',
+            lemon: '#ffe066'
+          },
+          fontFamily: {
+            title: ['Outfit', 'sans-serif'],
+            body: ['Fredoka', 'sans-serif'],
+            accent: ['Space Grotesk', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body text-white bg-night">
+  <canvas id="magicCanvas" aria-hidden="true"></canvas>
+  <canvas id="fireworkCanvas" aria-hidden="true"></canvas>
+
+  <div id="curtains" class="curtains" aria-hidden="true">
+    <div class="curtain curtain-left"><span>Gianna</span><small>Pop Show</small></div>
+    <div class="curtain curtain-right"><span>4 años</span><small>Stage Party</small></div>
+  </div>
+
+  <div class="noise" aria-hidden="true"></div>
+  <div class="led-strip" aria-hidden="true"></div>
+
+  <button id="audioFab" class="audio-fab" type="button" aria-label="Reproducir música">
+    <i class="fa-solid fa-play"></i>
+    <span class="bars" aria-hidden="true"><b></b><b></b><b></b><b></b></span>
+  </button>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="spotlight pink"></div>
+      <div class="spotlight blue"></div>
+      <div class="spotlight gold"></div>
+      <div class="hero-smoke"></div>
+      <div class="hero-grid"></div>
+      <div class="equalizer-wall" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+
+      <div class="hero-content" data-aos="zoom-out">
+        <p class="vip-badge"><i class="bi bi-stars"></i> Invitación VIP</p>
+        <h1 class="font-title">
+          <span class="party-icon">🎉</span>
+          Gianna Jazzlyn cumple 4 años
+        </h1>
+        <p class="hero-copy">Magia, música, baile y muchas sorpresas.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#confirmacion"><i class="fa-solid fa-heart"></i> Confirmar asistencia</a>
+          <a class="btn-secondary" href="#informacion"><i class="fa-solid fa-cake-candles"></i> Ver detalles</a>
+        </div>
+      </div>
+
+      <div class="stage-card no-image-stage" data-aos="fade-up" data-aos-delay="350" aria-hidden="true">
+        <div class="css-stage">
+          <span class="stage-ring"></span>
+          <span class="stage-core">G</span>
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <div>
+          <strong>K-Pop Party</strong>
+          <span>Luces, corazones y brillo en vivo</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section countdown-section" aria-labelledby="countdown-title">
+      <div class="section-heading" data-aos="fade-up">
+        <span>Cuenta regresiva</span>
+        <h2 id="countdown-title" class="font-title">Falta poco</h2>
+        <p class="event-date-text">Fecha editable</p>
+      </div>
+      <div id="countdown" class="countdown-grid" data-aos="fade-up" data-aos-delay="150">
+        <div><strong id="days">00</strong><span>Días</span></div>
+        <div><strong id="hours">00</strong><span>Horas</span></div>
+        <div><strong id="minutes">00</strong><span>Minutos</span></div>
+        <div><strong id="seconds">00</strong><span>Segundos</span></div>
+      </div>
+    </section>
+
+    <section id="mensaje" class="section">
+      <article class="glass invitation-card compact-card" data-aos="fade-up">
+        <div class="spark-orbit" aria-hidden="true"></div>
+        <span class="eyebrow"><i class="bi bi-envelope-heart"></i> Invitación</span>
+        <h2 class="font-title">Celebremos a Gianna</h2>
+        <p>Gianna Jazzlyn Gómez Mamani cumple 4 añitos.</p>
+        <p>Tu presencia hará que esta tarde sea más especial.</p>
+        <p>¡Te esperamos para compartir juegos, música, baile y mucha alegría!</p>
+      </article>
+    </section>
+
+    <section id="informacion" class="section info-section">
+      <div class="section-heading" data-aos="fade-up">
+        <span>Detalles</span>
+        <h2 class="font-title">Información del evento</h2>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card" data-aos="flip-left">
+          <i class="fa-solid fa-cake-candles"></i>
+          <h3>Cumpleaños</h3>
+          <p>4 años</p>
+        </article>
+        <article class="info-card" data-aos="flip-left" data-aos-delay="80">
+          <i class="fa-solid fa-calendar-days"></i>
+          <h3>Fecha</h3>
+          <p class="event-date-text">Fecha editable</p>
+        </article>
+        <article class="info-card" data-aos="flip-left" data-aos-delay="160">
+          <i class="fa-solid fa-clock"></i>
+          <h3>Hora</h3>
+          <p>15:00</p>
+        </article>
+        <article class="info-card" data-aos="flip-left" data-aos-delay="240">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Lugar</h3>
+          <p>Final Virgen de Luján<br>Urbanización Estelita 1</p>
+        </article>
+      </div>
+
+      <div class="location-panel glass" data-aos="fade-up">
+        <div>
+          <span class="eyebrow">Ubicación</span>
+          <h3 class="font-title">Final Virgen de Luján, Urbanización Estelita 1</h3>
+        </div>
+        <a id="mapButton" class="btn-primary" href="#" target="_blank" rel="noopener">
+          <i class="fa-solid fa-map-location-dot"></i> Abrir Google Maps
+        </a>
+      </div>
+
+      <article class="gift-card" data-aos="zoom-in">
+        <i class="fa-solid fa-gift"></i>
+        <div>
+          <h3>🎁 Regalos</h3>
+          <p>Si deseas obsequiar algo a Gianna Jazzlyn, la modalidad de regalos será en sobre. Gracias por tu cariño y compañía. 💖</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section contacts-section">
+      <div class="section-heading" data-aos="fade-up">
+        <span>Contactos</span>
+        <h2 class="font-title">Confirma tu asistencia</h2>
+      </div>
+      <div class="contact-grid">
+        <article class="contact-card" data-aos="fade-right">
+          <div class="contact-avatar">👨</div>
+          <h3>Papá</h3>
+          <p>📱 69228797</p>
+          <div>
+            <a href="tel:69228797" class="mini-btn"><i class="fa-solid fa-phone"></i> Llamar</a>
+            <a href="https://wa.me/59169228797" target="_blank" rel="noopener" class="mini-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </article>
+        <article class="contact-card" data-aos="fade-left">
+          <div class="contact-avatar">👩</div>
+          <h3>Mamá</h3>
+          <p>📱 78252492</p>
+          <div>
+            <a href="tel:78252492" class="mini-btn"><i class="fa-solid fa-phone"></i> Llamar</a>
+            <a href="https://wa.me/59178252492" target="_blank" rel="noopener" class="mini-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section timeline-section">
+      <div class="section-heading" data-aos="fade-up">
+        <span>Programa</span>
+        <h2 class="font-title">Momentos de la fiesta</h2>
+      </div>
+      <div class="timeline">
+        <div data-aos="fade-up"><b>01</b><span>Recepción</span></div>
+        <div data-aos="fade-up"><b>02</b><span>Bienvenida</span></div>
+        <div data-aos="fade-up"><b>03</b><span>Fotos</span></div>
+        <div data-aos="fade-up"><b>04</b><span>Juegos</span></div>
+        <div data-aos="fade-up"><b>05</b><span>Baile</span></div>
+        <div data-aos="fade-up"><b>06</b><span>Show</span></div>
+        <div data-aos="fade-up"><b>07</b><span>Pastel</span></div>
+        <div data-aos="fade-up"><b>08</b><span>Piñata</span></div>
+        <div data-aos="fade-up"><b>09</b><span>Recuerdos</span></div>
+        <div data-aos="fade-up"><b>10</b><span>Despedida</span></div>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="section-heading" data-aos="fade-up">
+        <span>Energía K-Pop</span>
+        <h2 class="font-title">Brillos animados</h2>
+      </div>
+      <div class="energy-gallery" data-aos="fade-up">
+        <button class="energy-card" type="button"><span>★</span><b>Estrellas</b></button>
+        <button class="energy-card" type="button"><span>♡</span><b>Corazones</b></button>
+        <button class="energy-card" type="button"><span>✦</span><b>Brillos</b></button>
+        <button class="energy-card" type="button"><span>♪</span><b>Música</b></button>
+        <button class="energy-card" type="button"><span>⚡</span><b>Show</b></button>
+      </div>
+    </section>
+
+    <section class="section music-section">
+      <div class="music-player glass" data-aos="zoom-in">
+        <div>
+          <span class="eyebrow">Música</span>
+          <h2 class="font-title">Listas para brillar</h2>
+        </div>
+        <div class="player-controls">
+          <button id="playMusic" class="btn-primary" type="button"><i class="fa-solid fa-play"></i> Reproducir</button>
+          <button id="pauseMusic" class="btn-secondary" type="button"><i class="fa-solid fa-pause"></i> Pausar</button>
+          <label class="volume-control">
+            <i class="fa-solid fa-volume-low"></i>
+            <input id="volumeMusic" type="range" min="0" max="1" step="0.01" value="0.45" aria-label="Volumen">
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section id="confirmacion" class="section rsvp-section">
+      <div class="section-heading" data-aos="fade-up">
+        <span>Confirmación</span>
+        <h2 class="font-title">¿Nos acompañas?</h2>
+      </div>
+      <form id="rsvpForm" class="rsvp-form glass" data-aos="fade-up">
+        <label>
+          Nombre
+          <input type="text" name="name" placeholder="Tu nombre" required>
+        </label>
+        <label>
+          Asistentes
+          <input type="number" name="guests" min="1" max="20" value="1" required>
+        </label>
+        <label>
+          Mensaje
+          <textarea name="message" rows="3" placeholder="Mensaje para Gianna"></textarea>
+        </label>
+        <button class="btn-primary btn-big" type="submit"><i class="fa-solid fa-heart"></i> Confirmar asistencia</button>
+        <div id="successMessage" class="success-message" role="status" aria-live="polite">
+          <i class="fa-solid fa-circle-check"></i>
+          ¡Gracias! Confirmación registrada.
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="heart">💜</div>
+    <p>Gracias por acompañarnos.</p>
+    <h2 class="font-title">Familia Gómez Mamani</h2>
+    <span>Las Guerreras K-Pop</span>
+  </footer>
+
+  <audio id="partyAudio" preload="metadata" loop>
+    <source src="assets/music/Listas_para_Brillar.mp3" type="audio/mpeg">
+    <source src="assets/music/Fiesta_en_el_Escenario.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
